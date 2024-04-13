@@ -78,7 +78,7 @@ function ReservationSection() {
     <section className="section">
       <div className="wrap-two-column">
         <div className="column-half">
-        <img src={hero} alt="Descripción de la imagen" style={{ width: 'auto', height: 'auto' }} />
+            <img src={hero} alt="Descripción de la imagen" style={{ width: 'auto', height: 'auto' }} />
         </div>
         <div className="column-half">
           <form action="" className="formulario">
@@ -166,7 +166,6 @@ function ReservationSection() {
         <Footer/>
       </div>
     </section>
-    
   );
 }
 

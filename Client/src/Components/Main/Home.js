@@ -6,6 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 import Work from "./Work";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -23,9 +24,11 @@ const Home = () => {
             La comida esta preparada por los mejores chefs que no dudaran
             en terminar la orden.
           </p>
-          <button className="secondary-button">
-            Reservar <FiArrowRight />{" "}
-          </button>
+          <Link to={"/reservar"}>
+            <button className="secondary-button">
+              Reservar <FiArrowRight />{" "}
+            </button>
+          </Link>
         </div>
         <div className="home-image-section">
           <img src={BannerImage} alt="" />

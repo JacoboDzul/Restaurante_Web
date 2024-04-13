@@ -43,9 +43,13 @@ function Navbar(){
         <img src={Logo} alt="" />
       </div>
       <div className="navbar-links-container">
-        <a href="">Inicio</a>
+        <Link to={"/"}>
+          Inicio
+        </Link>
         <a href="">Información</a>
-        <a href="">Reservar</a>
+        <Link to={"/reservar"}>
+          Reservar
+        </Link>
         <a href="">
           <BsCart2 className="navbar-cart-icon" />
         </a>
