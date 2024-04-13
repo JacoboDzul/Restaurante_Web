@@ -1,0 +1,78 @@
+/* Página de Contacto */
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+
+
+body{
+
+    background-color: white; 
+}
+.hero-page{
+  background: linear-gradient(to bottom, rgb(0 0 0 / .5), rgb(0 0 0 / .5)), url(https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) center;
+  background-size: cover;
+  height: 200px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap-hero-page{
+  color: #fff;
+ padding: 1rem;
+}
+
+.section{
+  max-width: 1800px;
+  margin: 3rem auto;
+  
+}
+
+.wrap-two-column{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+}
+
+
+/* Formulario */
+
+.formulario h3{
+  color: orange;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.formulario input,
+.formulario textarea {
+  margin-bottom: 1.2rem;
+  padding: .4rem .3rem;
+}
+
+.formulario button {
+  margin-top: 1rem;
+  width: 200px;
+  margin-left: auto; 
+  margin-right: auto; 
+  display: block; 
+  border: none;
+  padding: .5rem 1rem;
+  background-color: orange;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+
+
+.formulario{
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 1rem;
+  background-color: #F2F2F2;
+  border-radius: 50px;
+  border: none;
+  flex-wrap: wrap;
+  padding: 40px;
+  margin-left: 180px;
+  width: calc(100% + 20px);
+  box-sizing: border-box;
+  width: 430px;
+}
+
