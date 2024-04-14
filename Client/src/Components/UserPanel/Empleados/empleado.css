@@ -2,14 +2,12 @@
     --fontTexto:  'Raleway', sans-serif;
     --fontHeading: 'Staatliches', cursive;
 
-    /** Colores **/
     --azul : #00487C;
     --rojo : #A01C48;
     --naranja : #F58549;
     --amarillo: #ECA400;
     --verde : rgb(72, 183, 72);
 
-    /** gris **/
     --gris: #969696;
     --grisOscuro : #707070;
     --grisClaro: rgb(243, 243, 243);
@@ -21,8 +19,8 @@
 }
 
 .adaptive-button {
-    padding: 10px 20px; /* Define el relleno (padding) del botón */
-    font-size: 16px; /* Define el tamaño de la fuente del texto */
+    padding: 10px 20px;
+    font-size: 16px; 
     background-color: var(--verde);
     margin-bottom: 25px;
     color: black;

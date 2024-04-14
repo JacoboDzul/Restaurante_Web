@@ -27,7 +27,6 @@ const NuevoEmpleado = ({estado, cambiarEstado}) => {
         ClienteAxios.post('/postEmpleado', empleado)
         .then(res =>{
             console.log(res);
-            alert("Empleado agregado con éxito.");
             limpiarCampos();
             //window.location.reload();        
 		});

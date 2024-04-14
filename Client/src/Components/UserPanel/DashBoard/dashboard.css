@@ -206,3 +206,12 @@
 .ContenidoEmpleado{
     overflow-y: auto;
 }
+
+.contenido-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-right: 400px;
+    height: 100%;
+  }

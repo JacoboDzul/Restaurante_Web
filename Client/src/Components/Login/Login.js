@@ -20,49 +20,6 @@ import DashBoard from "../UserPanel/DashBoard/DashBoard";
 }*/
 
 function Login(){
-    /*const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const[errorResponse, setErrorResponse] = useState("");
-
-    const auth = useAuth();
-    const goTo = useNavigate;
-    
-
-    
-
-    async function handleSubmit(e) {
-        e.preventDefault();
-        try {
-            const response = await axiosInstance.post("/usuarios/login", {
-                username,
-                password
-            });
-
-            if (response.status >= 200 && response.status < 300) {
-                console.log("Login exitoso :)");
-                const json = await response.json();
-                
-                if (json.body.accessToken && json.body.refreshToken) {
-                    auth.saveUser(json);
-                    goToDashboard(); // Redirigir al panel de control
-                }
-            } else {
-                console.log("Algo falló :(");
-                const json = await response.json();
-                setErrorResponse(json.body.error);
-            }
-        } catch (error) {
-            goTo("/dashboard");
-            if(auth.isAuthenticated){
-                return <Navigate to="/dashboard"/>;
-            }
-        }
-    }
-
-    // Función para redirigir al panel de control
-    function goToDashboard() {
-        goTo("/dashboard");
-    }*/
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
     const [loginSuccessful, setLoginSuccessful] = useState(false);
@@ -83,7 +40,7 @@ function Login(){
         })
         .then(response => response.json())
         .then(result =>{
-            console.log(result.token) // Accede al token dentro del objeto JSON
+            console.log(result.token)
             if(result.token){
                 localStorage.setItem('token', result.token)
                 setLoginSuccessful(true);

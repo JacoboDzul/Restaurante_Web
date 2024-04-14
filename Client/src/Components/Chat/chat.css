@@ -1,0 +1,96 @@
+.chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 70%;
+}
+  
+.sent-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+  
+.received-message {
+    background-color: #f0f0f0;
+    color: black;
+    align-self: flex-start;
+}
+  
+.message-body {
+    font-size: 5px;
+}
+  
+.message-time {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+  .chat-input {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: calc(100% - 80px);
+}
+
+.chat-button {
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    border: none; 
+    background-color: #ef791e; 
+    color: white; 
+    padding: 10px 20px; 
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.chat-button:hover {
+    background-color: rgb(235, 161, 64); 
+}
+
+.overlayChat {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedorModalChat{
+    width: 700px;
+    min-height: 300px;
+    background-color: #fff;
+    margin-top: -80px;
+    margin-left: 325px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.encabezadoModalChat{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+
+    h3{
+        font-weight: 500;
+        font-size: 20px;
+        color: black;
+    }
+}

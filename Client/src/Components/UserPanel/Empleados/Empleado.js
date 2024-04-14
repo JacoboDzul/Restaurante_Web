@@ -71,7 +71,6 @@ function Empleados(){
             const updatedUsers = users.filter(user => user.Usuario_Id !== id);
             setUsers(updatedUsers);
             setFilteredUsers(updatedUsers);
-            alert("Usuario eliminado correctamente.");
         } catch (error) {
             console.error("Error al eliminar el usuario:", error);
             alert("Error al eliminar el usuario.");

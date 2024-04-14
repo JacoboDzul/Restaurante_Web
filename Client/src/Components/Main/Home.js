@@ -6,6 +6,7 @@ import { FiArrowRight } from "react-icons/fi";
 import Work from "./Work";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Chat from "../Chat/Chat";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -18,10 +19,10 @@ const Home = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-          Tu comida favorita caliente y fresca
+            Tu comida favorita caliente y fresca
           </h1>
           <p className="primary-text">
-            La comida esta preparada por los mejores chefs que no dudaran
+            La comida está preparada por los mejores chefs que no dudarán
             en terminar la orden.
           </p>
           <Link to={"/reservar"}>
@@ -34,9 +35,10 @@ const Home = () => {
           <img src={BannerImage} alt="" />
         </div>
       </div>
-      <Work/>
-      <Contact/>
-      <Footer/>
+      <Work />
+      <Contact />
+      <Chat /> {/* Aquí se renderiza el componente Chat */}
+      <Footer />
     </div>
   );
 };

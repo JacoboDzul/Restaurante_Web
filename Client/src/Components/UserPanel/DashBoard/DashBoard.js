@@ -3,6 +3,7 @@ import "./dashboard.css";
 import { Link } from "react-router-dom";
 import LogoDashboard from "../../../Assets/LogoDashboard.svg";
 import Empleados from "../Empleados/Empleado";
+import Chat from "../../Chat/Chat";
 
 function DashBoard() {
   const [isMenuActive, setMenuActive] = useState(false);
@@ -36,6 +37,11 @@ function DashBoard() {
         return <div>Contenido de la vista de Productos</div>;
       case "proveedores":
         return <div>Contenido de la vista de Proveedores</div>;
+      case "chat":
+        return <div className="contenido-chat">
+                <h2>Atención al cliente.</h2>
+                <Chat/>
+              </div>;
       default:
         return <div className="nav-logo-container2">
                 <img src={LogoDashboard} alt="" />
@@ -106,6 +112,14 @@ function DashBoard() {
                     </span>
                     <span className="title">Proveedores</span>
                 </a>
+            </li>
+            <li>
+                <Link to={""} onClick={() => handleViewChange("chat")}>
+                    <span className="icon">
+                      <ion-icon name="chatbubble-outline"></ion-icon>
+                    </span>
+                    <span className="title">Chat</span>
+                </Link>
             </li>
             <li>
                 <a href="">

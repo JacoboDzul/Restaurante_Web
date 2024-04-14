@@ -10,6 +10,7 @@ import Registrar from "./Components/UserPanel/Registrar/Registrar";
 import Empleados from "./Components/UserPanel/Empleados/Empleado";
 import NuevoEmpleado from "./Components/UserPanel/Empleados/NuevoEmpleado";
 import ReservasPage from "./Components/Reservas/Reservaciones";
+import Chat from "./Components/Chat/Chat";
 
 const router = createBrowserRouter([
   {
