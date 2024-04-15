@@ -1,29 +1,29 @@
 import { Link } from "react-router-dom";
-import "./producto.css";
+import "./reservacion.css";
 import ClienteAxios from '../../../config/axios';
 import React, { useEffect, useState} from 'react';
 import DataTable from 'react-data-table-component';
 import {CSVLink} from "react-csv";
 import Swal from "sweetalert2";
-import NuevoProducto from "./NuevoProducto";
-import ActualizarProducto from "./ActualizarProducto";
+import ActualizarReservacion from "./ActualizarReservacion";
 
 
-function Productos(){
+function Reservaciones(){
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [estadoModal, setEstado] = useState(false);
     const [estadoModal2, setEstado2] = useState(false);
-    const [selectedUser, setSelectedUser] = useState(null); 
+    const [selectedUser, setSelectedUser] = useState(null); // Agregar estado para almacenar el usuario seleccionado
     
     const headersExcel = [
-        {label: "Nombre", key: "Productos_Nombre"},
-        {label: "Descripción", key: "Productos_Descripcion"},
-        {label: "Tipo", key: "Productos_Tipo"},
-        {label: "Precio", key: "Productos_Precio"}
+        {label: "Nombre", key: "Reservaciones_Nombre"},
+        {label: "Fecha", key: "Reservaciones_Fecha"},
+        {label: "Número de personas", key: "Reservaciones_NumPersonas"},
+        {label: "Número de mesa", key: "Reservaciones_NoMesa"},
+        {label: "Observaciones", key:"Reservaciones_Observaciones"}
     ]
 
-    const URL = 'http://localhost:7777/getProductos'
+    const URL = 'http://localhost:7777/getReservaciones'
     
     const showData = async () => {
         const response = await fetch(URL);
@@ -35,52 +35,56 @@ function Productos(){
     const columns = [
         {
             name: 'Nombre',
-            selector: row => row.Productos_Nombre,
+            selector: row => row.Reservaciones_Nombre,
             sortable: true
         },
         {
-            name: 'Descripción',
-            selector: row => row.Productos_Descripcion
+            name: 'Fecha',
+            selector: row => row.Reservaciones_Fecha
         },
         {
-            name: 'Tipo',
-            selector: row => row.Productos_Tipo
+            name: '#Personas',
+            selector: row => row.Reservaciones_NumPersonas
         },
         {
-            name: 'Precio',
-            selector: row => row.Productos_Precio
+            name: '#Mesa',
+            selector: row => row.Reservaciones_NoMesa
+        },
+        {
+            name: 'Observaciones',
+            selector: row => row.Reservaciones_Observaciones
         },
         {
             name: 'Acciones',
-            cell: row => <button className="editProducto" onClick={() => handleEdit(row.Productos_Id)}>Editar</button>
+            cell: row => <button className="editReservacion" onClick={() => handleEdit(row.Reservaciones_Id)}>Editar</button> 
         },
         {
             name: '',
-            cell: row => <button className="deletProducto" onClick={() => mostrarAlerta(row.Productos_Id)}><ion-icon name="trash-outline"></ion-icon></button>
+            cell: row => <button className="deletReservacion" onClick={() => mostrarAlerta(row.Reservaciones_Id)}><ion-icon name="trash-outline"></ion-icon></button>
         }
     ];
 
     const handleChange = (e) => {
         const searchTerm = e.target.value.toLowerCase();
-        const filteredRecords = users.filter(record => record.Productos_Nombre.toLowerCase().includes(searchTerm));
+        const filteredRecords = users.filter(record => record.React_Nombre.toLowerCase().includes(searchTerm));
         setFilteredUsers(filteredRecords);
     }
 
     const deleteUser = async (id) => {
         try {
-            await ClienteAxios.delete(`/delProducto/${id}`);
-            const updatedUsers = users.filter(user => user.Productos_Id !== id);
+            await ClienteAxios.delete(`/delReserva/${id}`);
+            const updatedUsers = users.filter(user => user.Reservaciones_Id !== id);
             setUsers(updatedUsers);
             setFilteredUsers(updatedUsers);
         } catch (error) {
             console.error("Error al eliminar el registro:", error);
-            alert("Error al eliminar el registro.");
+            alert("Error al eliminar el usuario.");
         }
     };
 
     const handleEdit = (id) => {
-        setSelectedUser(id); 
-        setEstado2(true); 
+        setSelectedUser(id);
+        setEstado2(true);
     }
 
     const mostrarAlerta = (id) => {
@@ -105,21 +109,14 @@ function Productos(){
     }, []);
 
     return(
-        <div className="producto">
-            <h2>Productos</h2>
-            <button onClick={() => setEstado(!estadoModal)} className="adaptive-button">
-                <ion-icon name="person-add-outline"></ion-icon>
-                Nuevo producto
-            </button>
-            <NuevoProducto 
-                estado={estadoModal} 
-                cambiarEstado={setEstado}
-            />*
-            <input className="productoBuscador" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>
+        <div className="reservacion">
+            <h2>Reservaciones</h2>
+            
+            <input className="empleadoReservacion" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>
 
             <button className="csv-button">
                 <ion-icon className="excelIcon" name="download-outline"></ion-icon>
-                <CSVLink data={users} filename={"productos.csv"} headers={headersExcel}>Exportar a Excel</CSVLink>
+                <CSVLink data={users} filename={"reservaciones.csv"} headers={headersExcel}>Exportar a Excel</CSVLink>
             </button>      
 
             <DataTable
@@ -129,7 +126,7 @@ function Productos(){
                 pagination
             />
 
-            <ActualizarProducto
+            <ActualizarReservacion
                 estado={estadoModal2} 
                 cambiarEstado={setEstado2}
                 usuario={selectedUser} 
@@ -138,4 +135,4 @@ function Productos(){
     )
 }
 
-export default Productos;
+export default Reservaciones;

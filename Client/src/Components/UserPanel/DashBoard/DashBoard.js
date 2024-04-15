@@ -5,6 +5,9 @@ import LogoDashboard from "../../../Assets/LogoDashboard.svg";
 import Empleados from "../Empleados/Empleado";
 import Chat from "../../Chat/Chat";
 import Proveedor from "../Proveedores/Proveedor";
+import Productos from "../Productos/Producto";
+import Reservaciones from "../Reservaciones/Reservacion";
+import Platillos from "../Platillos/Platillo";
 
 function DashBoard() {
   const [isMenuActive, setMenuActive] = useState(false);
@@ -31,11 +34,17 @@ function DashBoard() {
                 <h2>.</h2>
                </div>;
       case "reservaciones":
-        return <div>Contenido de la vista de Reservaciones</div>;
+        return <div>
+                <Reservaciones/>
+              </div>;
       case "platillos":
-        return <div>Contenido de la vista de Platillos</div>;
+        return <div>
+                <Platillos/>
+              </div>;
       case "productos":
-        return <div>Contenido de la vista de Productos</div>;
+        return <div className="">
+                <Productos/>
+              </div>;
       case "proveedores":
         return <div className="">
                   <Proveedor/>
@@ -85,28 +94,28 @@ function DashBoard() {
                 </Link>
             </li>
             <li>
-                <a href="">
+                <Link to={""} onClick={() => handleViewChange("reservaciones")}>
                     <span className="icon">
                         <ion-icon name="storefront-outline"></ion-icon>
                     </span>
                     <span className="title">Reservaciones</span>
-                </a>
+                </Link>
             </li>
             <li>
-                <a href="">
+                <Link to={""} onClick={() => handleViewChange("platillos")}>
                     <span className="icon">
                         <ion-icon name="restaurant-outline"></ion-icon>
                     </span>
                     <span className="title">Platillos</span>
-               </a>
+               </Link>
             </li>
             <li>
-                <a href="">
+                <Link to={""} onClick={() => handleViewChange("productos")}>
                     <span className="icon">
                         <ion-icon name="cube-outline"></ion-icon>
                     </span>
                     <span className="title">Productos</span>
-                </a>
+                </Link>
             </li>
             <li>
                 <Link to={""} onClick={() => handleViewChange("proveedores")}>

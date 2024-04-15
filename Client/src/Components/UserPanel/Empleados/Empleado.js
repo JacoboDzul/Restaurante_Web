@@ -131,7 +131,7 @@ function Empleados(){
             <ActualizarEmpleado 
                 estado={estadoModal2} 
                 cambiarEstado={setEstado2}
-                usuario={selectedUser} // Pasar el usuario seleccionado al modal
+                usuario={selectedUser} 
             />
         </div>
     )

@@ -13,7 +13,7 @@
     --grisClaro: rgb(243, 243, 243);
 }
 
-.producto{
+.reservacion{
     margin-left: 30px;
     margin-top: 60px;
 }
@@ -42,15 +42,16 @@
     background-color: rgb(234, 213, 185);
 }
 
-.productoBuscador{
-    margin-left: 20px;
+.empleadoReservacion{
+    margin-left: 2px;
     height: 45px;
     font-size: 15px;
     width: 350px;
     padding-left: 20px;
+    margin-bottom: 30px;
 }
 
-.deletProducto{
+.deletReservacion{
     background-color: rgb(249, 61, 61);
     border: none;
     color: black;
@@ -59,7 +60,7 @@
     border-radius: 4px;
 }
 
-.deletProducto:hover{
+.deletReservacion:hover{
     background-color: #ef791e;
     color: white;
     transition: 0.3s;
