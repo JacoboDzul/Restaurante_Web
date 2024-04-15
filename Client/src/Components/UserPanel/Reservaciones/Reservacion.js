@@ -106,7 +106,7 @@ function Reservaciones(){
 
     useEffect(() => {
         showData();
-    }, []);
+    }, [users]);
 
     return(
         <div className="reservacion">

@@ -100,7 +100,7 @@ function Empleados(){
 
     useEffect(() => {
         showData();
-    }, []);
+    }, [users]);
 
     return(
         <div className="empleado">

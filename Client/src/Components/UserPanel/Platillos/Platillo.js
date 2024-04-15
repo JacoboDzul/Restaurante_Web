@@ -100,7 +100,7 @@ function Platillos(){
 
     useEffect(() => {
         showData();
-    }, []);
+    }, [users]);
 
     return(
         <div className="platillo">

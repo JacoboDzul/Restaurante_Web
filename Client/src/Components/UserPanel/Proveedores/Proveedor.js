@@ -91,7 +91,7 @@ function Proveedor(){
 
     useEffect(() => {
         showData();
-    }, []);
+    }, [users]);
 
     return(
         <div className="proveedor">

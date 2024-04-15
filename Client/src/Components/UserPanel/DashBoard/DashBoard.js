@@ -134,12 +134,12 @@ function DashBoard() {
                 </Link>
             </li>
             <li>
-                <a href="">
+                <Link to={"/login"}>
                     <span className="icon">
                         <ion-icon name="log-out-outline"></ion-icon>
                     </span>
                     <span className="title">Cerrar sesión</span>
-                </a>
+                </Link>
             </li>
           </ul>
         </div>

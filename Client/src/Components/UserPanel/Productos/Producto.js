@@ -102,7 +102,7 @@ function Productos(){
 
     useEffect(() => {
         showData();
-    }, []);
+    }, [users]);
 
     return(
         <div className="producto">
