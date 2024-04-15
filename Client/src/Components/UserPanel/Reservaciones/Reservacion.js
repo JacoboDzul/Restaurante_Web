@@ -13,7 +13,7 @@ function Reservaciones(){
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [estadoModal, setEstado] = useState(false);
     const [estadoModal2, setEstado2] = useState(false);
-    const [selectedUser, setSelectedUser] = useState(null); // Agregar estado para almacenar el usuario seleccionado
+    const [selectedUser, setSelectedUser] = useState(null); 
     
     const headersExcel = [
         {label: "Nombre", key: "Reservaciones_Nombre"},
@@ -56,7 +56,7 @@ function Reservaciones(){
         },
         {
             name: 'Acciones',
-            cell: row => <button className="editReservacion" onClick={() => handleEdit(row.Reservaciones_Id)}>Editar</button> 
+            cell: row => <button className="editReservacion" onClick={() => handleEdit(row.Reservaciones_Id)}><ion-icon name="pencil-outline"></ion-icon></button> 
         },
         {
             name: '',

@@ -13,8 +13,7 @@ function Empleados(){
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [estadoModal, setEstado] = useState(false);
     const [estadoModal2, setEstado2] = useState(false);
-    const [selectedUser, setSelectedUser] = useState(null); // Agregar estado para almacenar el usuario seleccionado
-    
+    const [selectedUser, setSelectedUser] = useState(null); 
     const headersExcel = [
         {label: "Nombre", key: "Usuario_Nombre"},
         {label: "Usuario", key: "Usuario_Username"},
@@ -51,7 +50,7 @@ function Empleados(){
         },
         {
             name: 'Acciones',
-            cell: row => <button className="editEmpleado" onClick={() => handleEdit(row.Usuario_Id)}>Editar</button> // Agregar función para manejar la edición
+            cell: row => <button className="editEmpleado" onClick={() => handleEdit(row.Usuario_Id)}><ion-icon name="pencil-outline"></ion-icon></button>
         },
         {
             name: '',
@@ -78,8 +77,8 @@ function Empleados(){
     };
 
     const handleEdit = (id) => {
-        setSelectedUser(id); // Almacenar el usuario seleccionado
-        setEstado2(true); // Mostrar el modal de actualización
+        setSelectedUser(id); 
+        setEstado2(true); 
     }
 
     const mostrarAlerta = (id) => {

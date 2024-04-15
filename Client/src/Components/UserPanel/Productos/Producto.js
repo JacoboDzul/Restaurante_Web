@@ -52,7 +52,7 @@ function Productos(){
         },
         {
             name: 'Acciones',
-            cell: row => <button className="editProducto" onClick={() => handleEdit(row.Productos_Id)}>Editar</button>
+            cell: row => <button className="editProducto" onClick={() => handleEdit(row.Productos_Id)}><ion-icon name="pencil-outline"></ion-icon></button>
         },
         {
             name: '',

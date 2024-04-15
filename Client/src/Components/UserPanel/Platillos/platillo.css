@@ -84,3 +84,18 @@
     background-color: #fce93f;
     transition: 0.3s;
 }
+
+.editPlatillo{
+    background-color: rgb(26, 141, 255);
+    border: none;
+    color: black;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 4px;   
+}
+
+.editPlatillo:hover{
+    background-color: #ef791e;
+    color: white;
+    transition: 0.3s;
+}

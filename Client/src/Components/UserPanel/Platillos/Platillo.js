@@ -50,7 +50,7 @@ function Platillos(){
         },
         {
             name: 'Acciones',
-            cell: row => <button className="editPlatillo" onClick={() => handleEdit(row.Platillos_Id)}>Editar</button> 
+            cell: row => <button className="editPlatillo" onClick={() => handleEdit(row.Platillos_Id)}><ion-icon name="pencil-outline"></ion-icon></button> 
         },
         {
             name: '',

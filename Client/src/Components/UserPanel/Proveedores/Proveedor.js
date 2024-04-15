@@ -41,7 +41,7 @@ function Proveedor(){
         },
         {
             name: 'Acciones',
-            cell: row => <button className="editProveedor" onClick={() => handleEdit(row.Proveedor_Id)}>Editar</button>
+            cell: row => <button className="editProveedor" onClick={() => handleEdit(row.Proveedor_Id)}><ion-icon name="pencil-outline"></ion-icon></button>
         },
         {
             name: '',
