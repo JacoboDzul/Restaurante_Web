@@ -11,6 +11,7 @@ import Empleados from "./Components/UserPanel/Empleados/Empleado";
 import NuevoEmpleado from "./Components/UserPanel/Empleados/NuevoEmpleado";
 import ReservasPage from "./Components/Reservas/Reservaciones";
 import Chat from "./Components/Chat/Chat";
+import Modulo from "./Components/Cocina/cocina-mod";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/reservar",
     element: <ReservasPage/>
+  },
+  {
+    path: "/cocina",
+    element: <Modulo/>
   }
 ])
 

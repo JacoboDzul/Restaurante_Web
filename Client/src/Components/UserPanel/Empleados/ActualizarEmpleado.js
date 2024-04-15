@@ -4,44 +4,46 @@ import ClienteAxios from '../../../config/axios';
 const ActualizarEmpleado = ({ estado, cambiarEstado, usuario }) => {
 
     const [empleado, guardarEmpleado] = useState({
-        action: 'update',
         nombre: '',
         username: '',
-        puesto: '',
         correo: '',
-        password: '',
-        id: usuario 
+        puesto: '',
+        password: ''
     });
 
-    const ConsultarAPI = async () => {
-        const EmpleadoConsulta = await ClienteAxios.get('/getEmpleadoId/' + usuario);
-        guardarEmpleado(EmpleadoConsulta.data[0]);
-    }
+    const consultarEmpleado = async () => {
+        try {
+            const respuesta = await ClienteAxios.get('/getEmpleadoId/' + usuario);
+            const empleado = respuesta.data[0];
+            guardarEmpleado(empleado);
+        } catch (error) {
+            console.error("Error al consultar la API:", error);
+        }
+    };
 
     useEffect(() => {
-        ConsultarAPI();
+        consultarEmpleado();
     }, [usuario]);
 
-    const actualizarState = e => {
+    const actualizarEmpleado = async (e) => {
+        e.preventDefault();
+        try {
+            const respuesta = await ClienteAxios.post(`/updateEmpleado/${usuario}`, empleado);
+            console.log(respuesta.data);
+            alert("Información actualizada");
+        } catch (error) {
+            console.error("Error al actualizar el empleado:", error);
+        }
+    };
+
+    const actualizarState = (e) => {
         guardarEmpleado({
             ...empleado,
             [e.target.name]: e.target.value
-        })
-    }
-
-    const ModificarEmpleado = e => {
-        e.preventDefault();
-        ClienteAxios.post('/postEmpleado', empleado)
-            .then(res => {
-                console.log("hola");
-                console.log(res);
-                alert("Información actualizada");
-                window.location.reload();
-            });
-    }
-
+        });
+    };
     return (
-        <>
+        <div>
             {estado &&
                 <div className="overlay">
                     <div className="contenedorModal">
@@ -51,23 +53,32 @@ const ActualizarEmpleado = ({ estado, cambiarEstado, usuario }) => {
                         <button className="btnCerrar" onClick={() => cambiarEstado(false)}>
                             <ion-icon name="close-outline"></ion-icon>
                         </button>
-
                         <div>
-                            <form onSubmit={ModificarEmpleado}>
-                                <legend>Llena todos los campos</legend>
-                                <div class="campo">
+                            <form onSubmit={actualizarEmpleado}>
+                            <legend>Llena todos los campos</legend>
+                            <div class="campo">
                                     <label>Nombre:</label>
-                                    <input type="text" placeholder="Ingrese el nombre" name="nombre" onChange={actualizarState} value={empleado.nombre} />
+                                    <input type="text" 
+                                           placeholder="Ingrese el nombre" 
+                                           name="nombre" 
+                                           onChange={actualizarState} 
+                                           value={empleado.nombre} />
                                 </div>
 
                                 <div class="campo">
                                     <label>Usuario:</label>
-                                    <input type="text" placeholder="Nombre de usuario" name="username" onChange={actualizarState} value={empleado.username} />
+                                    <input type="text" 
+                                           placeholder="Nombre de usuario" 
+                                           name="username" 
+                                           onChange={actualizarState} 
+                                           value={empleado.username} />
                                 </div>
 
                                 <div class="campo">
                                     <label>Puesto:</label>
-                                    <select name="puesto" onChange={actualizarState} value={empleado.puesto}>
+                                    <select name="puesto" 
+                                            onChange={actualizarState} 
+                                            value={empleado.puesto}>
                                         <option value="">Puesto del empleado</option>
                                         <option value="1">Gerente de tienda</option>
                                         <option value="2">Gerente de área</option>
@@ -79,22 +90,33 @@ const ActualizarEmpleado = ({ estado, cambiarEstado, usuario }) => {
                                 </div>
                                 <div class="campo">
                                     <label>Correo electronico:</label>
-                                    <input type="email" placeholder="Ingrese correo electronico" name="correo" onChange={actualizarState} value={empleado.correo} />
+                                    <input type="email" 
+                                           placeholder="Ingrese correo electronico" 
+                                           name="correo" 
+                                           onChange={actualizarState} 
+                                           value={empleado.correo} />
                                 </div>
                                 <div class="campo">
                                     <label>Contraseña:</label>
-                                    <input type="password" placeholder="Ingrese contraseña" name="password" onChange={actualizarState} value={empleado.password} />
+                                    <input type="password" 
+                                           placeholder="Ingrese contraseña" 
+                                           name="password" 
+                                           onChange={actualizarState} 
+                                           value={empleado.password} />
                                 </div>
 
                                 <div class="enviar">
-                                    <input type="submit" class="btnEnviar" value="Enviar" />
+                                    <input type="submit" 
+                                           class="btnEnviar" 
+                                           value="Enviar" />
                                 </div>
                             </form>
                         </div>
+                        
                     </div>
                 </div>
             }
-        </>
+        </div>
     );
 }
 

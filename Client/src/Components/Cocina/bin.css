@@ -1,0 +1,130 @@
+.cover {
+    background-image: url('https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 0 0 400px rgba(0, 0, 0, 0.5);
+  }
+  
+  .gallery-image {
+    width: 20%;
+    height: auto;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border-radius: 10px;
+  }
+  
+  .gallery-image:hover {
+    opacity: 0.8;
+    transform: translateY(-5px); /* Elevación sutil al pasar el cursor */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  /* Cambia la opacidad al pasar el cursor sobre la imagen */
+  }
+  
+  .cover-heading {
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 100px;
+    
+  }
+  
+  .lead {
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 100px;
+    
+  }
+  
+  .btn {
+    display: inline-block;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .btn-primary {
+    color: white;
+    background-color: orange;
+    border-color: white;
+  }
+  
+  .btn-primary:hover {
+    color: orange;
+    background-color: white;
+    border-color: orange;
+  }
+  
+  .section{
+    width: 1000px;
+    margin: 2rem auto;
+    
+  }
+  
+.formulario h3{
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .formulario input,
+  .formulario textarea {
+    margin-bottom: 1.2rem;
+    padding: .4rem .3rem;
+  }
+  
+  .formulario button {
+    margin-top: 1rem;
+    width: 200px;
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
+    border: none;
+    padding: .5rem 1rem;
+    background-color: white;
+    color: orange;
+    font-size: 1.1rem;
+  }
+  
+  .Select{
+    background-color: white;
+    font-size:medium ;
+    color: black;
+     border: none;
+     border-radius: 5px ;
+     margin-bottom: 1rem;
+  
+  }
+  
+  .formulario{
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 3rem;
+    background-color: orange;
+    border-radius: 50px;
+    border: none;
+    flex-wrap: wrap;
+    padding: 25px;
+    margin-left: 90px;
+    width: calc(100% + 20px);
+    box-sizing: border-box;
+    width: 400px;
+    height: 450px;
+  }
+  
+  
