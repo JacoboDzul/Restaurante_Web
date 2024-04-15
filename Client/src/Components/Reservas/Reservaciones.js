@@ -75,13 +75,13 @@ function ReservationSection() {
   };
 
   return (
-    <section className="section">
-      <div className="wrap-two-column">
+    <section className="section2">
+      <div className="wrap-two-column2">
         <div className="column-half">
             <img src={hero} alt="Descripción de la imagen" style={{ width: 'auto', height: 'auto' }} />
         </div>
         <div className="column-half">
-          <form action="" className="formulario">
+          <form action="" className="formulario2">
           <h3>Reserva tu mesa</h3>
             <input
               label="Nombre"

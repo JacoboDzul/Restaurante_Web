@@ -12,12 +12,13 @@ import {
     DateTimePicker,
     MuiPickersUtilsProvider,
   } from '@material-ui/pickers';
+import NavbarCocina from './NavbarCocina';
   
 
 function Cocina() {
   return (
 <section>
-    <Navbar/>
+    <NavbarCocina/>
 <div className="cover d-flex flex-column align-items-center justify-content-center text-center text-white">
     <h1 className="cover-heading">Cocina</h1>
     <p className="lead">¡Chef, es hora de transformar tu experiencia en la cocina!</p>
@@ -85,6 +86,7 @@ function Contenido(){
         <div className="wrap-two-column">
           <div className="column-half">
           <img src={chef} alt="Descripción de la imagen" style={{ width: 'auto', height: 'auto' }} />
+          
           </div>
           <div className="column-half">
             <form action="" className="formulario">
@@ -513,3 +515,4 @@ function Modulo() {
   }
   
   export default Modulo;
+  

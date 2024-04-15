@@ -17,7 +17,7 @@ import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 import { Link } from "react-router-dom";
 
-function Navbar(){
+function NavbarCocina(){
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {
@@ -43,14 +43,8 @@ function Navbar(){
         <img src={Logo} alt="" />
       </div>
       <div className="navbar-links-container">
-        <Link to={"/"}>
-          Inicio
-        </Link>
-        <Link to={"/reservar"}>
-          Reservar
-        </Link>
         <Link to="/login">
-          <button className="primary-button">Iniciar sesión</button>
+          <button className="primary-button">Cerrar sesión</button>
         </Link>
       </div>
       <div className="navbar-menu-container">
@@ -80,4 +74,4 @@ function Navbar(){
   )
 }
 
-export default Navbar;
+export default NavbarCocina;
