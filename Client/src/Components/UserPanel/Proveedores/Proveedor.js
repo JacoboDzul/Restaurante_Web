@@ -104,7 +104,7 @@ function Proveedor(){
                 estado={estadoModal} 
                 cambiarEstado={setEstado}
             />
-            <input className="proveedorBuscador" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>
+            {/*<input className="proveedorBuscador" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>*/}
 
             <button className="csv-button">
                 <ion-icon className="excelIcon" name="download-outline"></ion-icon>

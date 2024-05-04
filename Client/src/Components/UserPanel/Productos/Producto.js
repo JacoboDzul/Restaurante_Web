@@ -114,8 +114,8 @@ function Productos(){
             <NuevoProducto 
                 estado={estadoModal} 
                 cambiarEstado={setEstado}
-            />*
-            <input className="productoBuscador" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>
+            />
+            {/*<input className="productoBuscador" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>*/}
 
             <button className="csv-button">
                 <ion-icon className="excelIcon" name="download-outline"></ion-icon>

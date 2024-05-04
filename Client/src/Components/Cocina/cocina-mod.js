@@ -5,7 +5,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import Slider from '@mui/material/Slider';
 import DateMomentUtils from '@date-io/moment';
-import chef from "../../Assets/chef.jpg";
+import chef from "../../Assets/cocina2.jpg";
 import Navbar from '../Main/Navbar';
 import Footer from '../Main/Footer';
 import {
@@ -85,7 +85,7 @@ function Contenido(){
         <section className="section">
         <div className="wrap-two-column">
           <div className="column-half">
-          <img src={chef} alt="Descripción de la imagen" style={{ width: 'auto', height: 'auto' }} />
+          {/*<img src={chef} alt="Descripción de la imagen" style={{ width: 'auto', height: 'auto' }} />*/}
           
           </div>
           <div className="column-half">

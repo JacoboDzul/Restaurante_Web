@@ -162,18 +162,39 @@ function ReservationSection() {
           </form>
         </div>
       </div>
-      <div>
-        <Footer/>
-      </div>
     </section>
   );
 }
+
+function ImageGallery() {
+  return (
+      <div style={{ margin: '20px auto', maxWidth: '1000px' }}>
+           <h4 style={{ textAlign: 'center', fontFamily: 'Roboto Slab, sans-serif', fontWeight: 'bold', fontSize: '3rem', color: 'orange' }}>Reserva con nosotros</h4>
+<div style={{ display: 'flex', justifyContent: 'space-between' }}>
+  <img src="https://img.freepik.com/foto-gratis/penne-pasta-salsa-tomate-pollo-tomates-mesa-madera_2829-19739.jpg?t=st=1713053063~exp=1713056663~hmac=fcf144b6689d7b56b567c93ce535b1b7cfe75077a490b69c2cd34f57165295cb&w=740" alt="Plato 1" className="gallery-image" style={{ width: '30%', height: 'auto' }} />
+  <img src="https://img.freepik.com/foto-gratis/toma-enfoque-selectivo-deliciosas-flautas-cerdo-al-estilo-mexicano-placa-blanca_181624-38905.jpg?t=st=1713053092~exp=1713056692~hmac=26724e531cf73f70b9264b0222373d45b065671e6b5068eb998df3b4408e650a&w=740" alt="Imagen 2" className="gallery-image" style={{ width: '30%', height: 'auto' }} />
+  <img src="https://img.freepik.com/foto-gratis/cocina-mexicana_23-2147640325.jpg?t=st=1713053117~exp=1713056717~hmac=b64807495bdaffa15f30ec67ecd41c978560726f72e196e8085b18521cd6cadf&w=740" alt="Plato 3" className="gallery-image" style={{ width: '30%', height: 'auto' }} />
+</div>
+<div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '20px' }}>
+  <img src="https://img.freepik.com/fotos-premium/chilaquiles-plato-blanco-comida-mexicana_147448-116.jpg?w=740" alt="Plato 4" className="gallery-image"  style={{ width: '30%', height: 'auto' }} />
+  <img src="https://img.freepik.com/fotos-premium/mole-mexicano-ingredientes-mole-poblano-comida-picante-mexicana-tradicional-mexico_137422-10.jpg" alt="Plato 5" className="gallery-image"  style={{ width: '30%', height: 'auto' }} />
+  <img src="https://img.freepik.com/foto-gratis/sopa-zanahoria-crema-perejil-sobre-mesa-madera_123827-22531.jpg?t=st=1713058811~exp=1713062411~hmac=e1876470d5d47ec6a3fa44d26abe7eabab30042e313d9ffaa659feacb6766033&w=740" alt="Plato 6" className="gallery-image"  style={{ width: '30%', height: 'auto' }} />
+</div>
+<div>
+        <Footer/>
+      </div>
+</div>
+
+  );
+}
+
 
 function ReservasPage() {
   return (
     <main>
       <HeroSection />
       <ReservationSection />
+      <ImageGallery/>
     </main>
   );
 }

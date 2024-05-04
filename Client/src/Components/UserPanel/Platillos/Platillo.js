@@ -106,19 +106,21 @@ function Platillos(){
         <div className="platillo">
             <h2>Platillos</h2>
             
-            <input className="platilloBuscador" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>
+            {/*<input className="platilloBuscador" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>*/}
 
             <button className="csv-button">
                 <ion-icon className="excelIcon" name="download-outline"></ion-icon>
                 <CSVLink data={users} filename={"platillos.csv"} headers={headersExcel}>Exportar a Excel</CSVLink>
             </button>      
-
+            <div className="tabla">
             <DataTable
                 columns={columns}
                 data={filteredUsers}
                 paginationPerPage={7}
                 pagination
             />
+            </div>
+            
 
             <ActualizarPlatillo
                 estado={estadoModal2} 

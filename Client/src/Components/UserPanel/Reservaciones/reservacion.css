@@ -74,6 +74,7 @@
     right: 70px;
     padding: 15px;
     border-radius: 5px;
+    margin-left: 50px;
 }
 
 .excelIcon{
@@ -98,4 +99,8 @@
     background-color: #ef791e;
     color: white;
     transition: 0.3s;
+}
+
+.tabla{
+    margin-top: 100px;
 }

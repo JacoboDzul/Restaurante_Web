@@ -59,8 +59,11 @@ function Empleados(){
     ];
 
     const handleChange = (e) => {
+        console.log(e);
         const searchTerm = e.target.value.toLowerCase();
-        const filteredRecords = users.filter(record => record.Usuario_Nombre.toLowerCase().includes(searchTerm));
+        const filteredRecords = users.filter(record => 
+            record.Usuario_Nombre.toLowerCase().includes(searchTerm)
+        );
         setFilteredUsers(filteredRecords);
     }
 
@@ -113,7 +116,7 @@ function Empleados(){
                 estado={estadoModal} 
                 cambiarEstado={setEstado}
             />
-            <input className="empleadoBuscador" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>
+            {/*<input className="empleadoBuscador" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>*/}
 
             <button className="csv-button">
                 <ion-icon className="excelIcon" name="download-outline"></ion-icon>

@@ -112,20 +112,22 @@ function Reservaciones(){
         <div className="reservacion">
             <h2>Reservaciones</h2>
             
-            <input className="empleadoReservacion" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>
+            {/*<input className="empleadoReservacion" type="text" onChange={handleChange} placeholder="Buscar por nombre"/>*/}
 
             <button className="csv-button">
                 <ion-icon className="excelIcon" name="download-outline"></ion-icon>
                 <CSVLink data={users} filename={"reservaciones.csv"} headers={headersExcel}>Exportar a Excel</CSVLink>
             </button>      
 
-            <DataTable
+            <div className="tabla">
+                <DataTable
                 columns={columns}
                 data={filteredUsers}
                 paginationPerPage={7}
                 pagination
             />
 
+            </div>
             <ActualizarReservacion
                 estado={estadoModal2} 
                 cambiarEstado={setEstado2}
