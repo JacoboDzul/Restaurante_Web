@@ -18,7 +18,7 @@
   .gallery-image:hover {
     opacity: 0.8;
     transform: translateY(-5px); /* Elevación sutil al pasar el cursor */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);  /* Cambia la opacidad al pasar el cursor sobre la imagen */
+  box-shadow: 0 5px 15px rgba(0 0 0 / 0.3);  /* Cambia la opacidad al pasar el cursor sobre la imagen */
   }
   
   .cover-heading {
