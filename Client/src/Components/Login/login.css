@@ -1,6 +1,6 @@
 .login{
     background-color: #ef791e;
-    background: linear-gradient(to down, #f3b03d, #ffffff);
+    background: linear-gradient(to down, #f3b03d, #fff);
     display:grid;
     align-items: center;
     justify-content: center;
