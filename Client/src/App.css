@@ -148,7 +148,7 @@ nav {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 6rem 0rem;
+  margin: 6rem 0;
 }
 .contact-form-container {
   background-color: white;
