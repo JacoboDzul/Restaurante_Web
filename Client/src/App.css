@@ -99,7 +99,7 @@ nav {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 500px;
   color: #6a6a6a;
-  margin: 1.5rem 0rem;
+  margin: 1.5rem 0;
   
 }
 .secondary-button {
