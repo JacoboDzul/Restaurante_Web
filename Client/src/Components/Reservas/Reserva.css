@@ -31,7 +31,25 @@ body{
   grid-template-columns: 1fr 1fr;
   column-gap: 4rem;
 }
+.Boton-Container {
+  position: relative; /* Asegura que el contenido esté posicionado correctamente */
+  width: 100%; 
+  height: 30vh;
+  display: flex; /* Hace que los elementos hijos se comporten como elementos flexibles */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
 
+.Btn-Regret{
+  background-color: orange;
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.3rem;
+  width: 160px;
+  border: none;
+  border-radius: 10px;
+  padding: .5rem 1rem;
+}
 
 /* Formulario */
 

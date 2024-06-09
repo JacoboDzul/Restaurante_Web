@@ -85,7 +85,7 @@ function Contenido(){
         <section className="section">
         <div className="wrap-two-column">
           <div className="column-half">
-          {/*<img src={chef} alt="Descripción de la imagen" style={{ width: 'auto', height: 'auto' }} />*/}
+          {<img src={chef} alt="Descripción de la imagen" style={{ width: '300px', height: '300px' }} />}
           
           </div>
           <div className="column-half">

@@ -167,6 +167,12 @@ function ReservationSection() {
 }
 
 function ImageGallery() {
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
   return (
       <div style={{ margin: '20px auto', maxWidth: '1000px' }}>
            <h4 style={{ textAlign: 'center', fontFamily: 'Roboto Slab, sans-serif', fontWeight: 'bold', fontSize: '3rem', color: 'orange' }}>Reserva con nosotros</h4>
@@ -180,6 +186,11 @@ function ImageGallery() {
   <img src="https://img.freepik.com/fotos-premium/mole-mexicano-ingredientes-mole-poblano-comida-picante-mexicana-tradicional-mexico_137422-10.jpg" alt="Plato 5" className="gallery-image"  style={{ width: '30%', height: 'auto' }} />
   <img src="https://img.freepik.com/foto-gratis/sopa-zanahoria-crema-perejil-sobre-mesa-madera_123827-22531.jpg?t=st=1713058811~exp=1713062411~hmac=e1876470d5d47ec6a3fa44d26abe7eabab30042e313d9ffaa659feacb6766033&w=740" alt="Plato 6" className="gallery-image"  style={{ width: '30%', height: 'auto' }} />
 </div>
+
+<div class="Boton-Container">
+<button class="Btn-Regret" onClick={handleScrollToTop}>¡Reserva!</button>
+</div>
+
 <div>
         <Footer/>
       </div>

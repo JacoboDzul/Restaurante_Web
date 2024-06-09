@@ -150,12 +150,6 @@ function DashBoard() {
           <div className="toggle_dashboard" onClick={toggleMenu}>
             <ion-icon name="menu-outline"></ion-icon>
           </div>
-          <div className="search_dashboard">
-            <label>
-              <input type="text" placeholder="Buscar"/>
-              <ion-icon name="search-outline"></ion-icon>
-            </label>
-          </div>
         </div>
         <div className="Contenido">
           {renderContent()} {/* Renderizar el contenido dinámico */}
